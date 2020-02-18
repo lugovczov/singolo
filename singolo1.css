@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 
 .section-header {
     position: relative;
-    height: 89px;
+    height: 95px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
     display: flex;
@@ -64,4 +65,65 @@ body {
     cursor: pointer;
     color: #f06c64;
     /* display: block; */
+}
+
+.section-slider {
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+    height: 600px;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-main {
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.iphone-vertical {
+    position: absolute;
+    top: 53px;
+    left: 47px;}
+
+.iphone-horizontal {
+    position: absolute;
+    top: 174px;
+    right: 49px;
+}
+
+.ctrl-left {
+    margin-top: 285px;
+    margin-left: 46px;
+    width: 21px;
+    height: 20px;
+    border-left: 5px solid #ca4549;
+    border-top: 5px solid #ca4549;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.ctrl-left:hover {
+    cursor: pointer;
+    border-color: #b32d32;
+}
+
+.ctrl-right {
+    margin-top: 285px;
+    margin-right: 43px;
+    width: 21px;
+    height: 20px;
+    border-right: 5px solid #ca4549;
+    border-top: 5px solid #ca4549;
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+.ctrl-right:hover {
+    cursor: pointer;
+    border-color: #b32d32;
 }
