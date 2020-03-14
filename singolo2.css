@@ -9,10 +9,14 @@ body {
     margin: 0 auto;
 }
 
+p {
+    text-align: justify;
+}
+
 .portfolio {
-    height: 870px;
+    height: 869px;
     background-color: #2d303a;
-    padding: 70px 40px 73px 40px;
+    padding: 69px 40px 73px 40px;
     border-bottom: 6px solid #323746;
 }
 
@@ -25,7 +29,7 @@ body {
 }
 
 .portfolio__subtitle {
-    margin-top: 28px;
+    margin-top: 27px;
     margin-bottom: 10px;
     color: #767e9e;
     font-family: Lato;
@@ -62,8 +66,8 @@ body {
 
 .portfolio-example {
     overflow: hidden;
-    margin-top: 19px;
-    max-height: 600px;
+    margin-top: 20px;
+    max-height: 602px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -95,12 +99,15 @@ body {
 }
 
 .team__title {
-    margin-top: 12px;
+    margin-top: 14px;
     color: #666d89;
     font-family: "Lato";
     font-size: 18px;
     font-weight: 700;
     line-height: 17.86px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .team__subtitle {

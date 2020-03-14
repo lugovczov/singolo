@@ -9,6 +9,10 @@ body {
     margin: 0 auto;
 }
 
+p {
+    text-align: justify;
+}
+
 .get-quote {
     height: 654px;
     padding: 68px 40px 20px 40px;
@@ -64,7 +68,7 @@ body {
 
 .form__email {
     width: 619px;
-    /* height: 38px; */
+    height: 38px;
     margin-bottom: 17px;
     padding: 8px 14px;
     border: none;

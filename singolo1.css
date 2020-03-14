@@ -9,6 +9,10 @@ body {
     margin: 0 auto;
 }
 
+p {
+    text-align: justify;
+}
+
 .section-header {
     position: relative;
     height: 95px;
@@ -165,13 +169,16 @@ body {
     max-width: 299px;
     min-width: 290px;
     margin-bottom: 33px;
+    overflow: hidden;
+    max-height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 .services-item__img {
-
+    width: 59px;
+    height: 59px;
 }
 
 .services-item__title {
