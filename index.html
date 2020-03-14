@@ -6,21 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="section-header">
+    <header class="section-header" id="home">
         <div class="logo-top">
             <h1 class="logo-top__main">SINGOLO<sup class="logo__star">*</sup></h1>
             
         </div>
         <nav class="top-nav">
             <ul class="nav">
-                <li class="top-nav__item">HOME</li>
-                <li class="top-nav__item">SERVICES</li>
-                <li class="top-nav__item">PORTFOLIO</li>
-                <li class="top-nav__item">ABOUT</li>
-                <li class="top-nav__item">CONTACT</li>
+                <a href="#home"><li class="top-nav__item nav-selected">HOME</li></a>
+                <a href="#services"><li class="top-nav__item nav-no-selected" >SERVICES</li></a>
+                <a href="#portfolio"><li class="top-nav__item nav-no-selected" >PORTFOLIO</li></a>
+                <a href="#about"> <li class="top-nav__item nav-no-selected" >ABOUT</li></a>
+                <a href="#contact"><li class="top-nav__item nav-no-selected" >CONTACT</li></a>
+                
+               
+                
             </ul>
         </nav>
     </header>
@@ -34,7 +38,7 @@
             <div class="ctrl-right"></div>
         </wrapper>
     </aside>
-    <aside class="section-services">
+    <aside class="section-services" id="services">
         <h1 class="services__title">Our Services</h1>
         <p class="services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="services">
@@ -78,7 +82,7 @@
     </aside>
 
 
-    <aside class="portfolio">
+    <aside class="portfolio" id="portfolio">
         <h5 class="portfolio__title">Portfolio</h5>
         <p class="portfolio__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <ul class="portfolio-btn">
@@ -122,7 +126,7 @@
                 <img src="./assets/img/Project1.png" alt=""></div>
         </section>
     </aside>
-    <aside class="aboutUs">
+    <aside class="aboutUs" id="about">
         <h5 class="portfolio__title">About Us</h5>
         <p class="portfolio__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="team">
@@ -176,7 +180,7 @@
                 ></textarea>
                 <input type="submit" class="form__submit" value="Submit">
             </form>
-            <div class="contact">
+            <div class="contact" id="contact">
                 <h3 class="contact__title">Contact Information</h3>
                 <p class="contact__subtitle">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
                 <ul class="contact__list">
