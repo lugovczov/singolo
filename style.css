@@ -106,7 +106,43 @@ a {
 .iphone-vertical {
     position: absolute;
     top: 53px;
-    left: 47px;}
+    left: 47px;
+}
+
+.off-screen {
+    top: 64px;
+    left: 13px;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 10;
+    height: 335px;
+    width: 190px;
+    background: black;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.off-screen_horizontal {
+    transform: rotate(90deg);
+    top: -60px;
+    left: 132px;
+}
+
+.iphone-btn {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 408px;
+    left: 86px;
+    background-color: #000;
+    border-radius: 50%;
+    opacity: 0;
+} 
+
+.iphone-btn_horizontal {
+    top: 87px;
+    left: 8px;
+}
 
 .iphone-horizontal {
     position: absolute;
