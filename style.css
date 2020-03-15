@@ -361,7 +361,6 @@ a {
 
 .portfolio-btn {
     display: flex;
-
 }
 
 .portfolio-btn__item {
@@ -382,7 +381,21 @@ a {
 .portfolio-btn__item:hover {
     cursor: pointer;
     color: #dedede;
-    border: 1px solid #dedede;
+}
+
+.portfolio-btn__item-active {
+    color: #4f5671;
+    background-color: #dedede;
+    transition: 0.3s ease-out;
+}
+
+.portfolio-btn__item-active:hover {
+    color: #4f5671;
+}
+
+.portfolio-btn__item-no-active {
+    background-color: none;
+    transition: 0.3s ease-out;
 }
 
 .portfolio-example {

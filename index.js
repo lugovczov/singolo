@@ -6,6 +6,8 @@ window.onload = function() {
     offScreenClickIphone();
 
     slider();
+    //portfolio-btn
+    addPortfolioClickHandler();
 }
 
 //top-nav
@@ -116,4 +118,32 @@ const slider = () => {
             nextItem(currentItem);
         }
     })
+}
+
+//portfolio-btn
+
+const addPortfolioClickHandler = () => {
+    document.querySelector('.portfolio-btn').addEventListener('click', (e) => {
+        if (e.target.classList.contains('portfolio-btn__item')) {
+            
+            let clickedPortfolioBtn = e.target;
+
+            removeSelectedPortfolioBtn();
+            selectedClickPortfolioBtn(clickedPortfolioBtn);
+        }
+    })
+}
+
+const removeSelectedPortfolioBtn = () => {
+    let PortfolioBtnItem = document.querySelectorAll('.portfolio-btn .portfolio-btn__item');
+
+    PortfolioBtnItem.forEach(PortfolioBtn => {
+        PortfolioBtn.classList.remove('portfolio-btn__item-active');
+        PortfolioBtn.classList.add('portfolio-btn__item-no-active');
+    })
+}
+
+const selectedClickPortfolioBtn = (clickedPortfolioBtn) => {
+    clickedPortfolioBtn.classList.add('portfolio-btn__item-active');
+    clickedPortfolioBtn.classList.remove('portfolio-btn__item-no-active');
 }
