@@ -401,19 +401,35 @@ a {
 .portfolio-example {
     overflow: hidden;
     margin-top: 20px;
-    max-height: 602px;
+    height: 602px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    justify-content: space-between;
+    align-content: space-between;
     
 }
 
 .portfolio-example__img {
-    margin-bottom: 16px;
+    transition: 0.2s ease-in;
+    width: 220px;
+    height: 188px;
+}
+
+.portfolio-example__img:hover {
+    cursor: pointer;
 }
 
 .portfolio__img_order1 {
     order: 1;
+}
+
+.portfolio__img-selected {
+    border: 5px solid #F06C64;
+}
+
+.portfolio__img-no-selected {
+    border: none;
 }
 
 .aboutUs {

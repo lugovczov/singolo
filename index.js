@@ -4,10 +4,13 @@ window.onload = function() {
     addNavClickHandler();
     //off-iphone
     offScreenClickIphone();
-
+    //slider
     slider();
     //portfolio-btn
     addPortfolioClickHandler();
+    //portfolio-img active => border
+    addBorderPortfolioImgClickHandler();
+
 }
 
 //top-nav
@@ -158,7 +161,9 @@ const filterPortfolioImg = (textPortfolioBtn) => {
         
         e.classList.remove('portfolio__img_order1');  
         
-        if(e.lastChild.alt == textPortfolioBtn) {       //как сделать, чтобы в img alt передать несколько фильтров('All Artwork'),
+        removeSelectedImg();
+
+        if(e.alt == textPortfolioBtn) {       //как сделать, чтобы в img alt передать несколько фильтров('All Artwork'),
                                                         // а потом вот тут сделать проверку на вхождение одного из этих значений??
                                                         // на данный момент работае только при одном alt например ('Artwork'),
                                                         // так как сравнивается точный текст.
@@ -169,4 +174,34 @@ const filterPortfolioImg = (textPortfolioBtn) => {
     if( textPortfolioBtn == 'All') {
         e.classList.remove('portfolio__img_order1');   
     }
+}
+
+//portfolio Img activate
+const addBorderPortfolioImgClickHandler = () => {
+    document.querySelector('.portfolio-example').addEventListener('click', (e) => {
+        if (e.target.classList.contains('portfolio-example__img')) {
+            
+            console.log(e.toElement.children);
+            let clickedImg = e.target;
+            
+            removeSelectedImg();
+            selectedClickImg(clickedImg);
+        }
+    })
+}
+
+const removeSelectedImg = () => {
+    let imgItem = document.querySelectorAll('.portfolio-example .portfolio-example__img');
+
+    
+    imgItem.forEach(img => {
+        //console.log(img);
+        img.classList.remove('portfolio__img-selected');
+        img.classList.add('portfolio__img-no-selected');
+    })
+}
+
+const selectedClickImg = (clickedImg) => {
+    clickedImg.classList.add('portfolio__img-selected');
+    clickedImg.classList.remove('portfolio__img-no-selected');
 }
