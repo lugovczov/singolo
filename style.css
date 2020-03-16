@@ -405,10 +405,15 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 
 .portfolio-example__img {
     margin-bottom: 16px;
+}
+
+.portfolio__img_order1 {
+    order: 1;
 }
 
 .aboutUs {

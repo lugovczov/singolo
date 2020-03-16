@@ -71,7 +71,7 @@ const slider = () => {
     //slider
     let items = document.querySelectorAll('.slider .slider-item');
     let currentItem = 0;
-    //задержка для анимации 
+    //задержка для анимации чтобы не нажималось пока идёт слайд
     let isEnabled = true;
     
     function changeCurrentItem(n) {
@@ -127,9 +127,12 @@ const addPortfolioClickHandler = () => {
         if (e.target.classList.contains('portfolio-btn__item')) {
             
             let clickedPortfolioBtn = e.target;
-
+            
+            let textPortfolioBtn = clickedPortfolioBtn.innerText;
+            
             removeSelectedPortfolioBtn();
             selectedClickPortfolioBtn(clickedPortfolioBtn);
+            filterPortfolioImg(textPortfolioBtn);
         }
     })
 }
@@ -146,4 +149,24 @@ const removeSelectedPortfolioBtn = () => {
 const selectedClickPortfolioBtn = (clickedPortfolioBtn) => {
     clickedPortfolioBtn.classList.add('portfolio-btn__item-active');
     clickedPortfolioBtn.classList.remove('portfolio-btn__item-no-active');
+}
+
+const filterPortfolioImg = (textPortfolioBtn) => {
+    let portfolioImages = document.querySelectorAll('.portfolio-example .portfolio-example__img');
+    
+    portfolioImages.forEach( (e) => { 
+        
+        e.classList.remove('portfolio__img_order1');  
+        
+        if(e.lastChild.alt == textPortfolioBtn) {       //как сделать, чтобы в img alt передать несколько фильтров('All Artwork'),
+                                                        // а потом вот тут сделать проверку на вхождение одного из этих значений??
+                                                        // на данный момент работае только при одном alt например ('Artwork'),
+                                                        // так как сравнивается точный текст.
+        e.classList.add('portfolio__img_order1');
+        } 
+    })
+
+    if( textPortfolioBtn == 'All') {
+        e.classList.remove('portfolio__img_order1');   
+    }
 }
