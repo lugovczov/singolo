@@ -9,6 +9,10 @@ body {
     margin: 0 auto;
 }
 
+html {
+    position: relative;
+}
+
 p {
     text-align: justify;
 }   
@@ -506,7 +510,7 @@ a {
 }
 
 .form {
-
+    
 }
 
 .form__name {
@@ -517,6 +521,7 @@ a {
     border: none;
     border-radius: 5px;
     background-color: #d6564f;
+    color: #f0d8d9;
     font-family: 'Lato';
     font-size: 12px;
     font-weight: 400;
@@ -527,6 +532,12 @@ a {
     color: #f48c8f;
 }
 
+.form__name:hover {
+    cursor: pointer;
+    background-color: #c6413a;
+    transition: 0.2s ease;
+}
+
 .form__email {
     width: 619px;
     height: 38px;
@@ -535,6 +546,7 @@ a {
     border: none;
     border-radius: 5px;
     background-color: #d6564f;
+    color: #f0d8d9;
     font-family: 'Lato';
     font-size: 12px;
     font-weight: 400;
@@ -545,6 +557,12 @@ a {
     color: #f48c8f;
 }
 
+.form__email:hover {
+    cursor: pointer;
+    background-color: #c6413a;
+    transition: 0.2s ease;
+}
+
 .form__subject {
     width: 619px;
     /* height: 38px; */
@@ -553,7 +571,7 @@ a {
     border: none;
     border-radius: 5px;
     background-color: #d6564f;
-    color: #f48c8f;
+    color: #f0d8d9;
     font-family: 'Lato';
     font-size: 12px;
     font-weight: 400;
@@ -564,7 +582,13 @@ a {
     color: #f48c8f;
 }
 
-.form__describe {
+.form__subject:hover {
+    cursor: pointer;
+    background-color: #c6413a;
+    transition: 0.2s ease;
+}
+
+.form__description {
     width: 619px;
     height: 202px;
     padding: 8px 14px;
@@ -572,7 +596,7 @@ a {
     border: none;
     border-radius: 5px;
     background-color: #d6564f;
-    color: #f48c8f;
+    color: #f0d8d9;
     resize: none;
     font-family: 'Lato';
     font-size: 12px;
@@ -580,7 +604,14 @@ a {
     line-height: 21.56px;
 }
 
-.form__describe::placeholder {
+
+.form__description:hover {
+    cursor: pointer;
+    background-color: #c6413a;
+    transition: 0.2s ease;
+}
+
+.form__description::placeholder {
     color: #f48c8f;
 }
 
@@ -596,6 +627,12 @@ a {
     font-size: 12px;
     font-weight: 400;
     line-height: 21.56px;
+}
+
+.form__submit:hover {
+    cursor: pointer;
+    background-color: #c6413a;
+    transition: 0.2s ease;
 }
 
 .contact {
@@ -702,3 +739,99 @@ a {
     background-color: #666d89;
 
 }
+
+.screen-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.screen-modal_hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    width: 250px;
+    border-radius:5px;
+    right: 0;
+    background-color: #f06c64;
+    margin: 50px;
+    padding: 10px;
+    z-index: 105;
+}
+
+.modal__title {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #d6564f;
+    color:#f0d8d9;
+    text-align: left;
+    line-height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal__subject {
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #d6564f;
+    color:#f0d8d9;
+    text-align: left;
+    line-height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal__description {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #d6564f;
+    color:#f0d8d9;
+    text-align: left;
+    line-height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal__btn {
+    width: 100%;
+    height: 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #d6564f;
+    color:#f0d8d9;
+    text-align: center;
+    line-height: 26px;
+}
+
+.modal__btn:hover {
+    cursor: pointer;
+    background-color: #c6413a;
+    transition: 0.2s ease;
+}
+

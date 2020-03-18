@@ -10,7 +10,14 @@ window.onload = function() {
     addPortfolioClickHandler();
     //portfolio-img active => border
     addBorderPortfolioImgClickHandler();
+    //modal window
+    showModelWindowSendMessage();
 
+}
+
+window.oninput = function() {
+    //limited letters in textarea (form__description) and (form__subject)
+    limitLettersInForm();
 }
 
 //top-nav
@@ -204,4 +211,72 @@ const removeSelectedImg = () => {
 const selectedClickImg = (clickedImg) => {
     clickedImg.classList.add('portfolio__img-selected');
     clickedImg.classList.remove('portfolio__img-no-selected');
+}
+
+//model window 
+
+const showModelWindowSendMessage = () => {
+    let modalScreen = document.querySelector('.screen-modal'); 
+    
+    let form = document.querySelector('.form');
+    
+
+    
+    document.querySelector('.form').addEventListener('click', (e) => {
+        if ( form.checkValidity() & e.target.classList.contains('form__submit')) {
+
+            addValueTextSubjectInModal();
+            addValueTextDescriptionInModal();
+
+            modalScreen.classList.remove('screen-modal_hidden');
+        }
+    })
+    hiddenModalWindow();
+}
+
+const hiddenModalWindow = () => {
+    let modalScreen = document.querySelector('.screen-modal'); 
+    let form = document.querySelector('.form');
+    
+    modalScreen.addEventListener('click', (e) => {
+        if (e.target.classList.contains('screen-modal') | e.target.classList.contains('modal__btn')) {
+            modalScreen.classList.add('screen-modal_hidden'); 
+            form.reset();   //ввел тему, описание; после закрытия можального окна эти значения не обнуляются
+        }
+    })
+}
+
+const addValueTextSubjectInModal = () => {
+    let subjectModal = document.querySelector('.modal__subject');
+    let subjectForm = document.querySelector('.form__subject')
+
+    if (subjectForm.value.length > 0) {
+        subjectModal.innerText = 'Subject: ' + subjectForm.value;
+    }
+}
+
+const addValueTextDescriptionInModal = () => {
+    let descriptionModal = document.querySelector('.modal__description');
+    let descriptionForm = document.querySelector('.form__description');
+
+    if (descriptionForm.value.length > 0) {
+        descriptionModal.innerText = 'Description: ' + descriptionForm.value;
+    }
+}
+
+
+
+//limited letters
+
+const limitLettersInForm = () => {
+    let subject = document.querySelector('.form__subject');
+    let description = document.querySelector('.form__description');
+
+    if (subject.value.length > 50) {
+        return subject.value = subject.value.substring(0, 50) + '...';
+    }
+
+    if (description.value.length > 1000) {
+        return description.value = description.value.substring(0, 1000) + '...';
+    }
 }

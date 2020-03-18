@@ -174,8 +174,7 @@
                 <input type="text" class="form__name" required placeholder="Name (Required)">
                 <input type="email" class="form__email" required placeholder="Email (Required)">
                 <input type="text" class="form__subject" placeholder="Subject">
-                <textarea name="" id="" cols="30" rows="10" class="form__describe" placeholder="Describe your project in detail..." disabled
-                ></textarea>
+                <textarea name="" id="" cols="30" rows="10" class="form__description" placeholder="Describe your project in detail..."></textarea>
                 <input type="submit" class="form__submit" value="Submit">
             </form>
             <div class="contact" id="contact">
@@ -198,6 +197,13 @@
             <li class="social__item"><img src="./assets/img/linkedinFooter.svg" alt=""></li>
         </ul>
     </footer>
-
+    <div class="screen-modal screen-modal_hidden">
+        <div class="modal">
+            <p class="modal__title">The letter was sent </p>
+            <p class="modal__subject">Without subject</p>
+            <p class="modal__description">Without description</p>
+            <p class="modal__btn">OK</p>
+        </div>
+    </div>
 </body>
 </html>
