@@ -134,16 +134,20 @@ const slider = () => {
 
 const addPortfolioClickHandler = () => {
     document.querySelector('.portfolio-btn').addEventListener('click', (e) => {
+        if (e.target.classList.contains('portfolio-btn__item-no-active')) {
+            filterPortfolioImg();
+        }
         if (e.target.classList.contains('portfolio-btn__item')) {
             
             let clickedPortfolioBtn = e.target;
             
-            let textPortfolioBtn = clickedPortfolioBtn.innerText;
+            //let textPortfolioBtn = clickedPortfolioBtn.innerText;
             
             removeSelectedPortfolioBtn();
             selectedClickPortfolioBtn(clickedPortfolioBtn);
-            filterPortfolioImg(textPortfolioBtn);
+
         }
+        
     })
 }
 
@@ -161,26 +165,13 @@ const selectedClickPortfolioBtn = (clickedPortfolioBtn) => {
     clickedPortfolioBtn.classList.remove('portfolio-btn__item-no-active');
 }
 
-const filterPortfolioImg = (textPortfolioBtn) => {
-    let portfolioImages = document.querySelectorAll('.portfolio-example .portfolio-example__img');
+const filterPortfolioImg = () => {
+    let portfolioImages = document.querySelector('.portfolio-example ');
+    console.log(portfolioImages);
     
-    portfolioImages.forEach( (e) => { 
-        
-        e.classList.remove('portfolio__img_order1');  
-        
-        removeSelectedImg();
+    let firstImg = portfolioImages.children[0];
 
-        if(e.alt == textPortfolioBtn) {       //как сделать, чтобы в img alt передать несколько фильтров('All Artwork'),
-                                                        // а потом вот тут сделать проверку на вхождение одного из этих значений??
-                                                        // на данный момент работае только при одном alt например ('Artwork'),
-                                                        // так как сравнивается точный текст.
-        e.classList.add('portfolio__img_order1');
-        } 
-    })
-
-    if( textPortfolioBtn == 'All') {
-        e.classList.remove('portfolio__img_order1');   
-    }
+    portfolioImages.appendChild(firstImg);
 }
 
 //portfolio Img activate
