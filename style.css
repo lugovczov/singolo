@@ -885,5 +885,110 @@ a {
         min-height: 130px;
     }
 
+    .section-services {
+        padding-bottom: 5%;
+    }
 
+    .portfolio {
+        padding: 9% 6%;
+    }
+
+    .portfolio-example {
+        align-content: flex-start;
+        max-height: 566px;
+    }
+
+    .aboutUs {
+        padding-top: 11%;
+    }
+
+    .team {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-item {
+        width: 100%;
+    }
+
+    .team-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
+    .get-quote {
+        padding: 9% 6%;
+    }
+    
+    .form-contact {
+        display: block;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 5% 0;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer .social {
+        margin-right: 0;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    
+    .aboutUs {
+        padding-top: 11%;
+    }
+
+    .team {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-item {
+        width: 100%;
+    }
+
+    .team-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    
+    .get-quote {
+        padding: 9% 6%;
+    }
+    
+    .form-contact {
+        display: block;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 5% 0;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer .social {
+        margin-right: 0;
+    }
+
+    .logo {
+        display: none;
+    }
 }
