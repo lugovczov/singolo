@@ -297,7 +297,7 @@ a {
 .off-screen_horizontal {
     width: 69%;
     height: 77.5%;
-    top: 5.4%;
+    top: 5.3%;
     left: 12.3%;
 }
 
@@ -1061,10 +1061,6 @@ a {
         margin-top: 56%;
         margin-left: 12%;
     }
-    
-    
-    /* при нажатии нужно .top-nav_active на top-nav, убрать маржин у бургера , бургер повернуть иконку header__burger_active*/
-
 } 
 
 @media only screen and (max-width: 374px) {
@@ -1086,6 +1082,13 @@ a {
         margin-bottom: 20px;
     }
 
+    .portfolio-btn__item {
+        font-size: 8px;
+    }
+
+    .portfolio-example {
+        align-content: flex-start;
+    }
     
     .get-quote {
         padding: 9% 6%;
@@ -1113,5 +1116,46 @@ a {
 
     .logo {
         display: none;
+    }
+
+    .logo-top__main {
+        line-height: 19px;
+    }
+
+    /* бургер-menu */
+
+    .section-header {
+        justify-content: left;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .logo-top {
+        padding: 5.22% 5.35%;
+        z-index: 15;
+    }
+    
+    .logo-top__main {
+        font-size: 20px;
+    }
+    
+    .logo__star {
+        font-size: 20px;
+    }
+    
+    .top-nav {
+        display: none;
+    }
+
+    .top-nav_active {
+        display: block;
+    }
+    
+    .nav {
+        display: block;
+        margin-top: 56%;
+        margin-left: 12%;
     }
 }
