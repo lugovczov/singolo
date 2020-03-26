@@ -221,6 +221,7 @@ const showModelWindowSendMessage = () => {
             addValueTextSubjectInModal();
             addValueTextDescriptionInModal();
 
+            window.location.hash = '';
             modalScreen.classList.remove('screen-modal_hidden');
         }
     })
@@ -230,7 +231,6 @@ const showModelWindowSendMessage = () => {
 const hiddenModalWindow = () => {
     let modalScreen = document.querySelector('.screen-modal'); 
     let form = document.querySelector('.form');
-    window.location.hash = '#contact';
     
     modalScreen.addEventListener('click', (e) => {
         if (e.target.classList.contains('screen-modal') | e.target.classList.contains('modal__btn')) {
