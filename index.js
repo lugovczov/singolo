@@ -12,7 +12,8 @@ window.onload = function() {
     addBorderPortfolioImgClickHandler();
     //modal window
     showModelWindowSendMessage();
-
+    //nav burger menu
+    burgerMenuActive();
 }
 
 window.oninput = function() {
@@ -35,11 +36,12 @@ const addNavClickHandler = () => {
 
 const removeSelectedNav = () => {
     let navItem = document.querySelectorAll('.nav .top-nav__item');
-
+    
     navItem.forEach(nav => {
         nav.classList.remove('nav-selected');
         nav.classList.add('nav-no-selected');
     })
+    
 }
 
 const selectedClickNav = (clickedNav) => {
@@ -204,7 +206,7 @@ const selectedClickImg = (clickedImg) => {
     clickedImg.classList.remove('portfolio__img-no-selected');
 }
 
-//model window 
+//modal window 
 
 const showModelWindowSendMessage = () => {
     let modalScreen = document.querySelector('.screen-modal'); 
@@ -269,5 +271,41 @@ const limitLettersInForm = () => {
 
     if (description.value.length > 1000) {
         return description.value = description.value.substring(0, 1000) + '...';
+    }
+}
+
+//nav burger menu 
+
+const burgerMenuActive = () => {
+    let burgerBtn = document.querySelector('.header__burger'); 
+    let nav = document.querySelector('.top-nav');
+    let navHideScreen = document.querySelector('.top-nav_hidescreen');
+
+    document.querySelector('.header__burger').addEventListener('click', () => {
+        burgerBtn.classList.toggle('header__burger_active');
+        navHideScreen.classList.toggle('top-nav_hidescreen-active')
+        nav.classList.toggle('top-nav_active');
+
+    })
+    
+    hiddenBurgerMenuActive();
+    
+    function hiddenBurgerMenuActive() {
+        
+        navHideScreen.addEventListener('click', (e) => {
+            if (e.target.classList.contains('top-nav_hidescreen-active')) {
+                burgerBtn.classList.remove('header__burger_active');
+                navHideScreen.classList.remove('top-nav_hidescreen-active')
+                nav.classList.remove('top-nav_active');  
+            }
+        })
+        
+        nav.addEventListener('click', (e) => {
+            if (e.target.classList.contains('top-nav__item')) {
+                burgerBtn.classList.remove('header__burger_active');
+                navHideScreen.classList.remove('top-nav_hidescreen-active')
+                nav.classList.remove('top-nav_active');  
+            }
+        })
     }
 }
