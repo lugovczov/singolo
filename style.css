@@ -509,12 +509,12 @@ a {
 }
 
 .portfolio-example__img {
-    margin: 6px;
+    margin: 8px;
     transition: 0.2s ease-in;
-    min-width: 220px;
-    min-height: 188px;
-    width: 23.2%;
-    height: 23.2%;
+    min-width: 218px;
+    min-height: 186px;
+    width: 23.1%;
+    height: 23.1%;
 }
 
 .portfolio-example__img:hover {
@@ -945,8 +945,8 @@ a {
     }
 
     .portfolio-example__img {
-        min-width: 216px;
-        min-height: 184px;
+        min-width: 212px;
+        min-height: 180px;
     }
 
 
@@ -974,6 +974,10 @@ a {
     .portfolio-example {
         align-content: flex-start;
         max-height: 566px;
+    }
+    
+    .portfolio-example__img {
+        margin: 7px;
     }
 
     .aboutUs {
