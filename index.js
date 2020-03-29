@@ -221,7 +221,6 @@ const showModelWindowSendMessage = () => {
             addValueTextSubjectInModal();
             addValueTextDescriptionInModal();
 
-            window.location.hash = '';
             modalScreen.classList.remove('screen-modal_hidden');
         }
     })
